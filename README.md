@@ -108,7 +108,7 @@ This homework is graded based on the following criteria:
 
 ## Review
 
-You are required to submit BOTH of the following for review:
+I will be submitting BOTH of the following for review:
 
 - The URL of the functional, deployed application.
 

@@ -1,3 +1,5 @@
+const Todo = require('../todo');
+
 let noteTitle;
 let noteText;
 let saveNoteBtn;
