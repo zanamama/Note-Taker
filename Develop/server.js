@@ -19,4 +19,8 @@ app.get("notes", (req, res) => {
   res.sendFile(path.join(__dirname + "/public/notes.html"));
 });
 
+app.get("api/notes", (req, res) => {
+    res.sendFile(path.join(__dirname + "/public/api/notes.html"));
+});
+
 //PUSH Changes to github after creating code. Because my heroku is connected to my github, I can click on deploy and it'll deploy to heroku
