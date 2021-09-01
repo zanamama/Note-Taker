@@ -19,13 +19,26 @@ app.get("notes", (req, res) => {
   res.sendFile(path.join(__dirname + "/public/notes.html"));
 });
 
-app.get("/api/notes", (req, res) => {
+app.post("/api/notes", (req, res) => {
     const newNote = {id: Date.now(), title: req.body.title, text: req.body.text,};
 ;
     addNewNote(newNote);
     res.send(newNote);
 });
 
+app.delete("/api/notes/:id", (req, res) => {
+    const noteId = req.params.id;
+    removeNote(nodeId);
+    res.send(`deleting ${noteId}`);
+});
+
+//Server listening port
+app.listen(PORT, (err) => {
+    if (err) throw err;
+    console.log(`Listening on PORT ${PORT}`);
+});
+
 //PUSH Changes to github after creating code. Because my heroku is connected to my github, I can click on deploy and it'll deploy to heroku
 
-init();
+init(); 
+//INITIALIZE aboveß
